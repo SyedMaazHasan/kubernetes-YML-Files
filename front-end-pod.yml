@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: front-end-pod
+  labels:
+   app: front-end
+spec:
+  containers:
+  - name: react-container
+    image: syedmaazhasan/movie-frontend-latest-backend-points-webapp-node:latest
+    

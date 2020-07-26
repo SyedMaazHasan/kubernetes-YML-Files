@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: back-end-pod
+  labels:
+   app: back-end
+
+spec:
+  containers:
+  - name: node-container
+    image: syedmaazhasan/movie-backend-latest-today:latest

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end
+spec:
+  replicas: 4
+  selector:
+   matchLabels:
+    #below label should match the POD label (line 16)
+    app: front-end
+  template:
+  #copy below pods yml file info
+    metadata:
+      name: front-end-pod
+      labels:
+       app: front-end
+    spec:
+      containers:
+      - name: react-container
+        image: syedmaazhasan/movie-frontend-latest-backend-points-webapp-node:latest
+        
